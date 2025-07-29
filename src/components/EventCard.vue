@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { type Event } from '@/types'
 import EventMeta from './EventMeta.vue'
 
 defineProps<{
