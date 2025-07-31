@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { useEventStore } from '@/stores/event'
+import { storeToRefs } from 'pinia'
+/*import { ref, onMounted } from 'vue'
 import { type Event } from '@/types'
 import EventService from '@/services/EventService'
 import { useRouter } from 'vue-router'
+
 
 const event = ref<Event | null>(null)
 const props = defineProps({
@@ -11,9 +14,11 @@ const props = defineProps({
     required: true,
   },
 })
-const router = useRouter()
+const router = useRouter()*/
+const store = useEventStore()
+const { event } = storeToRefs(store)
 
-onMounted(() => {
+/*onMounted(() => {
   EventService.getEvent(parseInt(props.id))
     .then((response) => {
       event.value = response.data
@@ -29,7 +34,7 @@ onMounted(() => {
         router.push({ name: 'network-error-view' })
       }
     })
-})
+})*/
 </script>
 
 <template>
