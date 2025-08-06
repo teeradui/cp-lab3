@@ -13,6 +13,7 @@ const {message} = storeToRefs(store)
       <div id ="flashMessage" class="animate-fade" v-if="message">
         <h4>{{ message }}</h4>
       </div>
+      <h4 class="text-center font-bold text-gray-700 antialias">Deploy with Vercel</h4>
       <div class="wrapper">
         <nav class="py-6">
           <RouterLink class="font-bold text-gray-700" exact-active-class="text-green-500" :to="{name: 'event-list-view'}">Event</RouterLink> | 
