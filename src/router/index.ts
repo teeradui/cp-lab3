@@ -19,7 +19,8 @@ const router = createRouter({
       path: '/',
       name: 'event-list-view',
       component: EventListView,
-      props: (route) => ({ page: parseInt(route.query.page?.toString() || '1'), size: parseInt(route.query.size?.toString() || '2')})
+      props: (route) => ({ page: parseInt(route.query.page?.toString() || '1'),
+         size: parseInt(route.query.size?.toString() || '2')})
     },
     {
       path: '/event/:id',
@@ -87,6 +88,7 @@ const router = createRouter({
       component: StudentListView,
     },
   ],
+
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
